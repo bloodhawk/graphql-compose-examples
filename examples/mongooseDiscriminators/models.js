@@ -28,6 +28,9 @@ const CharacterSchema = new mongoose.Schema(
     height: Number,
     mass: Number,
     films: [String],
+    aNestedField: {
+      anotherGenericNestedField: String,
+    },
   },
   {
     collection: 'md_characters',
@@ -38,12 +41,18 @@ const CharacterSchema = new mongoose.Schema(
 const DroidSchema = new mongoose.Schema({
   makeDate: String,
   primaryFunction: [String],
+  aNestedField: {
+    aDroidNestedField: String,
+  },
 });
 
 const PersonSchema = new mongoose.Schema({
   gender: String,
   hairColor: String,
   starships: [String],
+  aNestedField: {
+    aPersonNestedField: String,
+  },
 });
 
 // set discriminator Key
